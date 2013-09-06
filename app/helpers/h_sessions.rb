@@ -1,6 +1,6 @@
 helpers do
 
-  def log_in_user(email,password)
+  def log_in_user(email, password)
     User.login(email, password)
     if @user
       session[:user_id] = @user.id
