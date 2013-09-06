@@ -3,33 +3,32 @@ function Modal(){
 
 Modal.prototype = {
   showModal: function(selector, show){
-    $(show).easyModal({
+    $(selector).easyModal({
       top: 200,
       overlay: 0.2
     });
 
-    $(selector).click(function(e){
-      $(show).trigger('openModal');
+    $(show).click(function(e){
+      $(selector).trigger('openModal');
       e.preventDefault();
     });
+
+    $('#signin_form').on('submit', function(e){
+      e.preventDefault();
+
+    console.log("I've been submitted");
+      $.ajax({
+        type: this.method,
+        url: this.action
+      }) //in progress
+    })
   }
 }
 
 
 $(document).ready(function() {
 
-  $('#signin').easyModal({
-    top: 200,
-    overlay: 0.2
-  });
+  var modal = new Modal();
+  modal.showModal($('#signin'), $('#signin_link'));
 
-  $('#signin_link').click(function(e){
-    $('#signin').trigger('openModal');
-    e.preventDefault();
-
-
-  })
-
-  // var modal = new Modal();
-  // modal.showModal($('#signin'), $('#signin_link'));
 })

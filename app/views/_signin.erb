@@ -2,10 +2,11 @@
 <div id="signin"
 style="display: block; position: fixed; z-index: 2001; left: 50%; top: 50%; margin-left: -200px; margin-top: -131px; background-color: white">
   Sign in
-  <form action="/user/new" method="post">
+  <form id='signin_form' action="/user/signin" method="post">
     Username or Email
-    <input type="text" name="username">
+    <input type="text" name="email"></br>
     Password
-    <input type="password" name="password">
+    <input type="password" name="password"></br>
+    <input type="submit" value="Log In">
   </form>
 </div>

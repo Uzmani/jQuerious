@@ -7,7 +7,7 @@ post '/user/signin' do
 
 post '/user/new' do
   User.create(params)
-  redirect 'home'
+  redirect '/home'
 end
 
 
