@@ -1,6 +1,7 @@
 .container {
   margin: 20px auto;
-  width: 600px;
+  width: 100%;
+  height: 500px;
   padding: 0px 20px 20px 20px;
   border: 1px dotted black;
 }
@@ -10,7 +11,38 @@ th {
 
 
 body {
-  background-image: url("http://i.imgur.com/BQwoiAM.png");
-  background-size: cover;
+/*  background-image: url("http://subtlepatterns.com/patterns/grid.png");
+  background-repeat: repeat-x, repeat-y;*/
 
+  background-image: url("http://i.imgur.com/BQwoiAM.png");
+  background-size: cover; 
+}
+
+#signin_container {
+  color: white;
+  background-color: #333;
+  width: 30%;
+  position: absolute;
+  top: 55%;
+  left: 35%;
+  border-radius: 10px;
+  text-align: center;
+  border: 5px solid #fff;
+  box-shadow: 10px 10px 50px #333
+
+}
+
+#signin_link {
+  border-bottom: 5px solid white;
+  padding: 10px;
+}
+
+#signup_link {
+  padding: 10px;
+}
+
+#signin_container a {
+  color: white;
+  text-decoration: none;
+  font-size: 30px
 }
