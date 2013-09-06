@@ -7,3 +7,10 @@
 th {
   text-align: left;
 }
+
+
+body {
+  background-image: url("http://i.imgur.com/BQwoiAM.png");
+  background-size: cover;
+
+}
