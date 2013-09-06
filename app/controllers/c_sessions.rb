@@ -3,8 +3,7 @@ post '/user/signin' do
     unless @login_error
       redirect '/home'
     end
-end
-
+  end
 
 post '/user/new' do
   User.create(params)
@@ -16,3 +15,4 @@ get '/logout' do
   session.clear
   erb :index
 end
+
