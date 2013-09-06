@@ -4,17 +4,18 @@ post '/user/signin' do
       redirect '/home'
     end
   end
-end
+
 
 
 post '/user/new' do
   User.create(params)
-  redirect 'home'
+  redirect '/home'
 end
+
 
 
 get '/logout' do 
   session.clear
   erb :index
   end
-end
+
