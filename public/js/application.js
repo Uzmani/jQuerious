@@ -2,14 +2,14 @@ function Modal(){
 }
 
 Modal.prototype = {
-  showModal: function(selector, show){
-    $(selector).easyModal({
+  showSigninModal: function(form, link){
+    $(form).easyModal({
       top: 200,
       overlay: 0.2
     });
 
-    $(show).click(function(e){
-      $(selector).trigger('openModal');
+    $(link).click(function(e){
+      $(form).trigger('openModal');
       e.preventDefault();
     });
 
@@ -34,6 +34,6 @@ Modal.prototype = {
 $(document).ready(function() {
 
   var modal = new Modal();
-  modal.showModal($('#signin'), $('#signin_link'));
-
+  modal.showSigninModal($('#signin'), $('#signin_link'));
+  modal.showSignupModal
 })
