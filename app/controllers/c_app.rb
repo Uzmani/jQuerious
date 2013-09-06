@@ -14,9 +14,16 @@ get '/survey/new' do
   erb :create_survey
 end
 
+
+post '/survey/create' do 
+
+end
+
+
 get '/survey/:id' do 
 
 end
+
 
 #chae erase this line and on
 
