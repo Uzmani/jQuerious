@@ -1,9 +1,8 @@
-post '/user/signin' do 
+post '/user/signin' do
   User.login(params)
     unless @login_error
       redirect '/home'
     end
-  end
 end
 
 
@@ -13,8 +12,7 @@ post '/user/new' do
 end
 
 
-get '/logout' do 
+get '/logout' do
   session.clear
   erb :index
-  end
 end
