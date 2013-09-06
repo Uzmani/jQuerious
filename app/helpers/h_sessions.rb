@@ -1,7 +1,7 @@
 helpers do
 
-  def log_in_user(email, password)
-    User.login(email, password)
+  def log_in_user(input)
+    @user = User.login(input)
     if @user
       session[:user_id] = @user.id
     else

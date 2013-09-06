@@ -22,6 +22,6 @@ class User < ActiveRecord::Base
     else
       @login_error = "Incorrect Username/Password combination"
     end
-  end  
+  end
 
 end
