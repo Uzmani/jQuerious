@@ -18,4 +18,3 @@ surveys.each do |survey|
     survey.questions.create(title: Faker::Lorem.sentence)
   end
 end
-

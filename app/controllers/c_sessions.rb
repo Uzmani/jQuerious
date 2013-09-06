@@ -1,5 +1,5 @@
 post '/user/signin' do
-  User.login(params)
+  log_in_user(params)
     unless @login_error
       redirect '/home'
     end

@@ -1,4 +1,7 @@
-get '/home' do 
+get '/home' do
+  puts "*" * 90
+  puts current_user
+  puts "*" * 90
   @user_surveys = current_user.surveys
   @all_surveys = Survey.all
   erb :dashboard
@@ -6,7 +9,7 @@ end
 
 
 
-get '/stats' do 
+get '/stats' do
 
   erb :stats
 end
@@ -14,24 +17,24 @@ end
 
 
 
-get '/survey/new' do 
+get '/survey/new' do
 
   erb :create_survey
 end
 
 
 
-post '/survey/create' do 
+post '/survey/create' do
   # receives JSON. Iterate through questions to create survey
 end
 
 
 
-post '/survey/:id/question/create' do 
+post '/survey/:id/question/create' do
 
 end
 
-get '/survey/:id' do 
+get '/survey/:id' do
   @current_survey = Survey.find(params[:id])
   erb :view_survey
 end
