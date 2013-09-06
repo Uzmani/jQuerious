@@ -1,6 +1,6 @@
 class CreateAnswers < ActiveRecord::Migration
   def change
-    create_answers do |t|
+    create_table :answers do |t|
       t.references :user
       t.references :question
       t.references :choice

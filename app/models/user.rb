@@ -3,6 +3,8 @@ class User < ActiveRecord::Base
   has_many :surveys
   has_many :answers
 
+  include BCrypt
+
     def password
     @password ||= Password.new(password_hash)
   end

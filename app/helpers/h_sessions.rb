@@ -4,6 +4,7 @@ helpers do
     User.login(email, password)
     if @user
       session[:user_id] = @user.id
+    end
   end
 
 
