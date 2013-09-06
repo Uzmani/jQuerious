@@ -20,7 +20,12 @@ Modal.prototype = {
       $.ajax({
         type: this.method,
         url: this.action
-      }) //in progress
+      }).done(function(response){
+        console.log('ajax request made');
+      }).fail(function(jqXHR, textStatus){
+        console.log("ajax request failed: " + textStatus);
+        console.log(jqXHR);
+      })
     })
   }
 }
