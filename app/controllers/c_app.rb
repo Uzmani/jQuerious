@@ -27,7 +27,7 @@ end
 
 
 
-post '/question/create' do 
+post '/survey/:id/question/create' do 
 
 end
 
