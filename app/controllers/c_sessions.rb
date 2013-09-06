@@ -4,7 +4,7 @@ post '/user/signin' do
       redirect '/home'
     end
   end
-end
+
 
 
 post '/user/new' do
@@ -17,4 +17,4 @@ get '/logout' do
   session.clear
   erb :index
   end
-end
+

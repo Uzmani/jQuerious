@@ -7,7 +7,7 @@ test_user = User.create(username: "test", email: "test@dbc.com", password: "pass
 
 # survey creation
 5.times do
-  Survey.create(user: test_user, title: Faker::Lorem.sentence)
+  Survey.create(user: test_user, name: Faker::Lorem.sentence)
 end
 
 surveys = Survey.all
