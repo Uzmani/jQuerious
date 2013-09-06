@@ -1,4 +1,9 @@
 get '/' do
-  # Look in app/views/index.erb
-  erb :index
+  if logged_in?
+    @users_surveys = current_user.surveys
+    redirect '/home'
+  else
+    erb :index
+  end
 end
+
