@@ -13,14 +13,29 @@ th {
 
 body {
   background-image: url("http://i.imgur.com/ft3twlS.png");
-  background-size: cover; 
+  background-size: cover;
   background-repeat: repeat-y;
 }
 
+<<<<<<< HEAD
 .btn-toolbar {
   position: fixed;
   top: 20px;
   right: 70px;
+=======
+#signin_container {
+  color: black;
+  background-color: #333;
+  width: 30%;
+  position: absolute;
+  top: 400px;
+  left: 100px%;
+  border-radius: 10px;
+  text-align: center;
+  border: 5px solid #fff;
+  box-shadow: 10px 10px 50px #333
+
+>>>>>>> 628f9179b59dfedda6842f5fdd6ff78d1ebb73de
 }
 
 .welcome {
@@ -58,6 +73,14 @@ body {
   font-size: 20px;
 }
 
+<<<<<<< HEAD
 /*#logout {
   font-size: 20px;
 }*/
+=======
+
+/* create survey */
+#question, #choice {
+  display: none;
+}
+>>>>>>> 628f9179b59dfedda6842f5fdd6ff78d1ebb73de
