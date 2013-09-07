@@ -4,6 +4,8 @@ function Modal(){
 Modal.prototype = {
 
   showModal: function(form, link){
+    console.log('in showModal function');
+
     $(form).easyModal({
       top: 200,
       overlay: 0.7
@@ -17,6 +19,10 @@ Modal.prototype = {
 
   createQuestion: function(form, link){
     this.showModal(form, link);
+    $('#add_question').on('click', function(e){
+      e.preventDefault();
+      console.log('form create question was clicked');
+    })
   }
 }
 
