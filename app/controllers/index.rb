@@ -3,7 +3,7 @@ get '/' do
     @users_surveys = current_user.surveys
     redirect '/home'
   else
-    erb :index
+    erb :index, :layout => false
   end
 end
 

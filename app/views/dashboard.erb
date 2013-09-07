@@ -19,7 +19,6 @@
   Popular surveys
   <ul>
   <% @all_surveys.each do |survey|%>
-
     <li><a href=""><%=survey.name%> - <%= User.find(survey.user_id).username %></a></li>
   <% end %>
   </ul>
