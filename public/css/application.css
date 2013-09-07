@@ -70,6 +70,6 @@ body {
 
 
 /* create survey */
-#question {
+#questionPartial, #choicePartial {
   display: none;
 }
