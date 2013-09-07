@@ -10,7 +10,7 @@
   Your surveys
   <ul id="surveys">
   <% @user_surveys.each do |survey| %>
-    <li><%=survey.name%></li>
+    <a href="/survey/<%= survey.id%>"><%=survey.name%></a> <br/>
   <% end %>
   </ul>
 </div>
@@ -19,7 +19,7 @@
   Popular surveys
   <ul>
   <% @all_surveys.each do |survey|%>
-    <li><%=survey.name%> - <%= User.find(survey.user_id).username %></li>
+    <a href="/survey/<%= survey.id%>"><%=survey.name%></a> - <%= User.find(survey.user_id).username %></a> <br/>
   <% end %>
   </ul>
 </div>

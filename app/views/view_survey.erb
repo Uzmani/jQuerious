@@ -1,6 +1,6 @@
 <div id="view_survey">
-  <h3><%= current_survey.name %></h3>
-  <% current_survey.questions.each do |question| %>
+  <h3><%= @current_survey.name %></h3>
+  <% @current_survey.questions.each do |question| %>
     <ul> <span><%= question.title%></span>
       <% question.choices.each do |choice| %>
         <li> <%= choice.option%></li>
