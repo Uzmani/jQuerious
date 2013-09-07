@@ -1,0 +1,15 @@
+<div id="create_survey" style="background-color: white">
+   <form action="/survey/create" method="post">
+
+    <div id="surveydiv">
+      Survey name
+      <input type="text" name="survey[name]">
+      <span><a id="title_link" href="">Add</a></span>
+    </div>
+
+    <div id="question">
+      <%= erb :"survey/_create_qa", layout: false %>
+    </div>
+
+  </form>
+</div>
