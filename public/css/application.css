@@ -13,7 +13,7 @@ th {
 
 body {
   background-image: url("http://i.imgur.com/ft3twlS.png");
-  background-size: cover; 
+  background-size: cover;
   background-repeat: repeat-y;
 }
 
@@ -69,4 +69,7 @@ body {
 }
 
 
-
+/* create survey */
+#question {
+  display: none;
+}

@@ -3,7 +3,7 @@
 </div>
 
 <div>
-  <a id="create_survey" href="/survey/new">Create a survey</a>
+  <a id="create_survey" href="">Create a survey</a>
 </div>
 
 <div id="your_surveys">
@@ -29,7 +29,11 @@
   <a class="btn" href='/logout'><i class="icon-user"></i>Log out</a>
 </div>
 
-<div id="question">
-  <%= erb :_create_qa, layout: false %>
+<div id="survey_form">
+  <%= erb :"/survey/_survey_form", layout: false %>
 </div>
+
+<!-- <div id="question">
+  <%= erb :_create_qa, layout: false %>
+</div> -->
 
