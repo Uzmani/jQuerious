@@ -6,7 +6,8 @@
   <h2>Your surveys</h2>
   <ul id="surveys">
   <% @user_surveys.each do |survey| %>
-    <li><a href="/survey/<%= survey.id%>"><%=survey.name%></a></li>
+    <li><a href="/survey/<%= survey.id%>"><%=survey.name%></a>
+    <a href="/stats" class="btn btn-mini btn-warning">View stats</a></li>
   <% end %>
   </ul>
 </div>
@@ -30,7 +31,5 @@
 <a id="create_survey" class=" btn btn-primary btn-large" href="/survey/new">Create a survey</a>
 <div>
 
-<div id="survey_form">
-  <%= erb :"/survey/_survey_form", layout: false %>
-</div>
+
 
