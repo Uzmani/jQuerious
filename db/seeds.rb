@@ -14,7 +14,6 @@ surveys = Survey.all
 
 surveys.each do |survey|
   10.times do |i|
-    i+=1
     survey.questions.create(title: Faker::Lorem.sentence)
   end
 end
