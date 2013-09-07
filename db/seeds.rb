@@ -17,3 +17,11 @@ surveys.each do |survey|
     survey.questions.create(title: Faker::Lorem.sentence)
   end
 end
+
+questions = Question.all
+
+questions.each do |question|
+  4.times do |i|
+    question.choices.create(option: Faker::Lorem.word, question_id: question.id)
+  end
+end
