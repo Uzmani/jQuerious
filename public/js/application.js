@@ -8,10 +8,14 @@ Modal.prototype = {
       overlay: 0.2
     });
 
-    $(link).click(function(e){
+    $(link).on('click', function(e){
       $(form).trigger('openModal');
       e.preventDefault();
     });
+  },
+
+  createQuestion: function(form, link){
+    this.showModal(form, link);
   }
 }
 
@@ -20,5 +24,7 @@ $(document).ready(function() {
 
   var modal = new Modal();
   modal.showModal($('#signin'), $('#signin_link'));
-  modal.showModal($('#signup'), $('#signup_link'))
+  modal.showModal($('#signup'), $('#signup_link'));
+
+  modal.createQuestion($("#question"), $('#create_survey'));
 })

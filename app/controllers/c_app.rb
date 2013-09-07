@@ -7,19 +7,14 @@ get '/home' do
   erb :dashboard
 end
 
-
-
 get '/stats' do
 
   erb :stats
 end
 
-
-
-
 get '/survey/new' do
-
-  erb :create_survey
+  #stubbed:
+  erb :create_survey, layout: false
 end
 
 

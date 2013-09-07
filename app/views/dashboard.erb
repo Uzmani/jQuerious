@@ -2,8 +2,8 @@
   <h3>Welcome, <%= current_user.username%></h3>
 </div>
 
-<div id="create_survey">
-  <a href="/survey/new">Create a survey</a>
+<div>
+  <a id="create_survey" href="/survey/new">Create a survey</a>
 </div>
 
 <div id="your_surveys">
@@ -24,4 +24,7 @@
   </ul>
 </div>
 
+<div id="question">
+  <%= erb :_create_qa, layout: false %>
+</div>
 <a href='/logout'>Logout</a>
