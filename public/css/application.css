@@ -16,6 +16,7 @@ body {
 
   background-image: url("http://i.imgur.com/BQwoiAM.png");
   background-size: cover; 
+  background-repeat: no-repeat;
 }
 
 #signin_container {
