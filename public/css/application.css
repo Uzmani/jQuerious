@@ -1,10 +1,10 @@
 .container {
   margin: 20px auto;
   width: 80%;
-  height: 500px;
   padding: 0px 20px 20px 20px;
-  background-color: white;
-
+  background-color: #FCFEF5;
+  border-radius: 20px;
+  font-family: monospace, serif;
 }
 th {
   text-align: left;
@@ -17,56 +17,47 @@ body {
   background-repeat: repeat-y;
 }
 
-#signin_container {
-  color: black;
-  background-color: #333;
-  width: 30%;
-  position: absolute;
-  top: 60%;
-  left: 35%;
-  border-radius: 10px;
-  text-align: center;
-  border: 5px solid #fff;
-  box-shadow: 10px 10px 50px #333
-
+.btn-toolbar {
+  position: fixed;
+  top: 20px;
+  right: 70px;
 }
 
-#signin_link {
-  border-bottom: 5px solid white;
-  padding: 10px;
+.welcome {
+  padding: 40px;
 }
 
-#signup_link {
-  padding: 10px;
+.welcome h1{
+  font-size: 70px;
+  padding: 20px;
 }
 
-#signin_container a {
-  color: white;
-  text-decoration: none;
-  font-size: 30px
+#your_surveys {
+  border: 7px solid;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 20px;
 }
 
-#signin_container a:hover {
-  color: black;
-  font-weight: bolder;
+#your_surveys li{
+  
 }
 
-#signin {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  border: 5px solid white;
-  padding: 10px 20px 20px 20px;
+#others_surveys {
+  border: 7px solid;
+  border-radius: 25px;
+  margin-bottom: 20px;
+  padding: 20px;
+  font-size: 20px;
 }
 
-
-#signup {
-  background-color: black;
-  color: white;
-  border-radius: 10px;
-  border: 5px solid white;
-  padding: 10px 20px 20px 20px;
+#create_survey {
+  position: relative;
+  float:right;
+  font-size: 20px;
 }
 
-
-
+/*#logout {
+  font-size: 20px;
+}*/

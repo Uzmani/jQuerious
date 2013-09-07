@@ -1,13 +1,10 @@
-<div>
-  <h3>Welcome, <%= current_user.username%></h3>
+<div class="welcome">
+  <h1>Welcome, <%= current_user.username%></h1>
 </div>
 
-<div>
-  <a id="create_survey" href="/survey/new">Create a survey</a>
-</div>
 
 <div id="your_surveys">
-  Your surveys
+  <h2>Your surveys</h2>
   <ul id="surveys">
   <% @user_surveys.each do |survey| %>
     <li><a href=""><%=survey.name%></a></li>
@@ -16,7 +13,7 @@
 </div>
 
 <div id="others_surveys">
-  Popular surveys
+  <h2>Popular surveys</h2>
   <ul>
   <% @all_surveys.each do |survey|%>
     <li><a href=""><%=survey.name%> - <%= User.find(survey.user_id).username %></a></li>
@@ -28,6 +25,10 @@
 <div class="btn-toolbar">
   <a class="btn" href='/logout'><i class="icon-user"></i>Log out</a>
 </div>
+
+<div>
+<a id="create_survey" class="btn btn-primary" href="/survey/new">Create a survey</a>
+<div>
 
 <div id="question">
   <%= erb :_create_qa, layout: false %>
