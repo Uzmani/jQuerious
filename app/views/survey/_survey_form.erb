@@ -2,13 +2,15 @@
    <form action="/survey/create" method="post">
 
     <div id="surveydiv">
-      Survey name
-      <input type="text" name="survey[name]">
-      <span><a id="title_link" href="">Add</a></span>
+      <%= erb :"survey/_create_title", layout: false %>
     </div>
 
     <div id="question">
       <%= erb :"survey/_create_qa", layout: false %>
+    </div>
+
+    <div id="choice">
+      <%= erb :"survey/_create_choice", layout: false %>
     </div>
 
   </form>

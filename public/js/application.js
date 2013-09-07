@@ -19,7 +19,7 @@ Modal.prototype = {
 
   createSurvey: function(form, link){
     this.showModal(form, link);
-    $('#title_link').on('click', function(e){
+    $('#add_title').on('click', function(e){
       e.preventDefault();
       console.log('form create question was clicked');
 
@@ -34,8 +34,6 @@ Modal.prototype = {
       }).fail(function(jqXHR, textStatus, errorThrown){
         console.log(errorThrown);
       })
-
-
 
     })
   }
