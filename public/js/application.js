@@ -2,10 +2,11 @@ function Modal(){
 }
 
 Modal.prototype = {
+
   showModal: function(form, link){
     $(form).easyModal({
       top: 200,
-      overlay: 0.2
+      overlay: 0.7
     });
 
     $(link).on('click', function(e){

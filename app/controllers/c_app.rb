@@ -20,6 +20,10 @@ end
 
 
 post '/survey/create' do
+
+
+  Survey.create(user_id: current_user.id, name: params[:name])
+
   # receives JSON. Iterate through questions to create survey
 end
 
@@ -28,6 +32,7 @@ end
 post '/survey/:id/question/create' do
 
 end
+
 
 get '/survey/:id' do
   @current_survey = Survey.find(params[:id])
