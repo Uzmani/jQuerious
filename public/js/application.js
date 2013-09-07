@@ -2,28 +2,21 @@ function Modal(){
 }
 
 Modal.prototype = {
-  showSigninModal: function(form, link){
+
+  showModal: function(form, link){
     $(form).easyModal({
       top: 200,
-      overlay: 0.2
+      overlay: 0.7
     });
 
-    $(link).click(function(e){
+    $(link).on('click', function(e){
       $(form).trigger('openModal');
       e.preventDefault();
     });
   },
 
-  showSignupModal: function(form, link){
-    $(form).easyModal({
-      top: 200,
-      overlay: 0.2
-    });
-
-    $(link).click(function(e){
-      $(form).trigger('openModal');
-      e.preventDefault();
-    });
+  createQuestion: function(form, link){
+    this.showModal(form, link);
   }
 }
 
@@ -31,6 +24,8 @@ Modal.prototype = {
 $(document).ready(function() {
 
   var modal = new Modal();
-  modal.showSigninModal($('#signin'), $('#signin_link'));
-  modal.showSignupModal($('#signup'), $('#signup_link'))
+  modal.showModal($('#signin'), $('#signin_link'));
+  modal.showModal($('#signup'), $('#signup_link'));
+
+  modal.createQuestion($("#question"), $('#create_survey'));
 })

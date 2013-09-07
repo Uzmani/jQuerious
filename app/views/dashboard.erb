@@ -2,8 +2,8 @@
   <h3>Welcome, <%= current_user.username%></h3>
 </div>
 
-<div id="create_survey">
-  <a href="/survey/new">Create a survey</a>
+<div>
+  <a id="create_survey" href="/survey/new">Create a survey</a>
 </div>
 
 <div id="your_surveys">
@@ -19,11 +19,18 @@
   Popular surveys
   <ul>
   <% @all_surveys.each do |survey|%>
+
     <li><a href=""><%=survey.name%> - <%= User.find(survey.user_id).username %></a></li>
   <% end %>
   </ul>
 </div>
 
+
 <div class="btn-toolbar">
   <a class="btn" href='/logout'><i class="icon-user"></i>Log out</a>
 </div>
+
+<div id="question">
+  <%= erb :_create_qa, layout: false %>
+</div>
+

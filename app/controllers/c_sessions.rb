@@ -6,7 +6,9 @@ post '/user/signin' do
   end
 
 post '/user/new' do
-  User.create(params)
+  p params
+  @new = User.new(params)
+  log_in_user(params) if @new.save
   redirect '/home'
 end
 
