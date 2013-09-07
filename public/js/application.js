@@ -34,7 +34,6 @@ Modal.prototype = {
       }).fail(function(jqXHR, textStatus, errorThrown){
         console.log(errorThrown);
       })
-
     })
   }
 }
