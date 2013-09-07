@@ -11,7 +11,7 @@ end
 
 get '/survey/new' do
   #stubbed:
-  erb :create_survey, layout: false
+  erb :create_survey
 end
 
 

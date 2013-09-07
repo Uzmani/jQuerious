@@ -55,9 +55,17 @@ body {
 #create_survey {
   position: relative;
   float:right;
-  font-size: 20px;
 }
 
+#add_question {
+  font-size: 20px;
+  padding: 20px;
+}
+
+#submit {
+  position: relative;
+  float: right;
+}
 /*#logout {
   font-size: 20px;
 }*/
