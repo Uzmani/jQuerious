@@ -19,7 +19,7 @@ Modal.prototype = {
 
   createSurvey: function(form, link){
     this.showModal(form, link);
-    $('#add_title').on('click', function(e){
+    $('#add_survey_title').on('click', function(e){
       e.preventDefault();
       console.log('form create question was clicked');
 
@@ -28,9 +28,9 @@ Modal.prototype = {
         type: 'get'
       }).done(function(response){
         var input = $('input[name="survey[name]"]');
-        $('#question').prepend('<p>' + input.val() + '</p>');
-        $('#surveydiv').hide();
-        $('#question').show();
+        $('#questionPartial').prepend('<p>' + input.val() + '</p>');
+        $('#surveyPartial').hide();
+        $('#questionPartial').show();
       }).fail(function(jqXHR, textStatus, errorThrown){
         console.log(errorThrown);
       })
