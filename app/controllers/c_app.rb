@@ -9,9 +9,10 @@ get '/stats' do
   erb :stats
 end
 
+
+
 get '/survey/new' do
-  #stubbed:
-  erb :create_survey, layout: false
+  erb :"/survey/_survey_form", layout: false
 end
 
 
