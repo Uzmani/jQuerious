@@ -12,7 +12,9 @@ end
 
 
 get '/survey/new' do
-  erb :"/survey/_survey_form", layout: false
+  #stubbed:
+  erb :create_survey
+
 end
 
 
