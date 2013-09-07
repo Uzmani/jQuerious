@@ -1,17 +1,24 @@
 <div>
-  <form action="" method="">
+
+  <form action="/survey/create" method="post">
     Survey name
     <input type="text" name="name">
-  </form>
+
 </div>
 
+
 <div id="created_survey">
-  <% current_survey.questions.each%>
+  
+  <% unless @current_survey.nil? %>
+    <%current_survey.questions.each%>
+  <% end %>
+
 </div>
 
 
 <div id="add_question">
-  <a href="">Add question</a>
+  <a href="#">Add question</a>
 </div>
 
 <button>Submit</button>
+  </form>
