@@ -35,8 +35,6 @@ Modal.prototype = {
         console.log(errorThrown);
       })
 
-
-
     })
   }
 }
