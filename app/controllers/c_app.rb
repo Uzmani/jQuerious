@@ -4,8 +4,8 @@ get '/home' do
   erb :dashboard
 end
 
-get '/stats' do
-
+get '/survey/:id/stats' do
+  @current_survey = Survey.find(params[:id])
   erb :stats
 end
 
