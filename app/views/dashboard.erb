@@ -7,7 +7,7 @@
   <ul id="surveys">
   <% @user_surveys.each do |survey| %>
     <li><a href="/survey/<%= survey.id%>"><%=survey.name%></a>
-    <a href="/stats" class="btn btn-mini btn-warning">View stats</a></li>
+    <a href="/survey/<%= survey.id%>/stats" class="btn btn-mini btn-warning">View stats</a></li>
   <% end %>
   </ul>
 </div>
