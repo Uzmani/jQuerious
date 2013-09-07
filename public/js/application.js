@@ -46,6 +46,8 @@ $(document).ready(function() {
   modal.showModal($('#signup'), $('#signup_link'));
 
  $('.container').hide().fadeIn(800);
+ $(function() {
+});
 
   modal.createSurvey($("#survey_form"), $('#create_survey'));
   //modal.createSurvey($("#question"), $('#create_survey'));
