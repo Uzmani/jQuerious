@@ -5,7 +5,7 @@ Modal.prototype = {
   showSigninModal: function(form, link){
     $(form).easyModal({
       top: 200,
-      overlay: 0.2
+      overlay: 0.7
     });
 
     $(link).click(function(e){
@@ -17,7 +17,7 @@ Modal.prototype = {
   showSignupModal: function(form, link){
     $(form).easyModal({
       top: 200,
-      overlay: 0.2
+      overlay: 0.7
     });
 
     $(link).click(function(e){
