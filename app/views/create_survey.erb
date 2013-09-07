@@ -1,9 +1,9 @@
 <div>
-
   <form action="/survey/create" method="post">
-    Survey name
+    <h1>Survey name</h1>
     <input type="text" name="name">
-
+    <!-- chae, create js to grab element by keyup from form then append it after Survey name-->
+  </form>
 </div>
 
 <div id="created_survey">
@@ -15,9 +15,14 @@
 </div>
 
 <div id="add_question">
-  <a href="#">Add question</a>
+  <a class="btn btn-inverse btn-large" href="#">Add question</a>
 </div>
 
-<button>Submit</button>
-</form>
 
+
+<div id="question">
+  <%= erb :_create_qa, layout: false %>
+</div>
+
+<button id="submit" class=" btn-large btn btn-success">Submit</button>
+</form>

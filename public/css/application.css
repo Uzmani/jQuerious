@@ -17,12 +17,12 @@ body {
   background-repeat: repeat-y;
 }
 
-<<<<<<< HEAD
+
 .btn-toolbar {
   position: fixed;
   top: 20px;
   right: 70px;
-=======
+}
 #signin_container {
   color: black;
   background-color: #333;
@@ -33,9 +33,7 @@ body {
   border-radius: 10px;
   text-align: center;
   border: 5px solid #fff;
-  box-shadow: 10px 10px 50px #333
-
->>>>>>> 628f9179b59dfedda6842f5fdd6ff78d1ebb73de
+  box-shadow: 10px 10px 50px #333;
 }
 
 .welcome {
@@ -70,17 +68,25 @@ body {
 #create_survey {
   position: relative;
   float:right;
-  font-size: 20px;
 }
 
-<<<<<<< HEAD
+#add_question {
+  font-size: 20px;
+  padding: 20px;
+}
+
+#submit {
+  position: relative;
+  float: right;
+}
+
 /*#logout {
   font-size: 20px;
 }*/
-=======
+
 
 /* create survey */
 #question, #choice {
   display: none;
 }
->>>>>>> 628f9179b59dfedda6842f5fdd6ff78d1ebb73de
+

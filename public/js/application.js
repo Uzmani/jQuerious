@@ -46,7 +46,4 @@ $(document).ready(function() {
   modal.showModal($('#signin'), $('#signin_link'));
   modal.showModal($('#signup'), $('#signup_link'));
 
-  modal.createSurvey($("#survey_form"), $('#create_survey'));
-
-  //modal.createSurvey($("#question"), $('#create_survey'));
 })
