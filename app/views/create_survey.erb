@@ -1,24 +1,19 @@
 <div>
-  <form action="/survey/create" method="post">
+  <form id="master_survey" action="/survey/create" method="post">
     <h1>Survey name:</h1>
     <input type="text" name="name">
-    <!-- chae, create js to grab element by keyup from form then append it after Survey name-->
-  </form>
-</div>
 
-<div id="created_survey">
+  <div id="created_survey">
+    <% unless @current_survey.nil? %>
+      <%current_survey.questions.each%>
+    <% end %>
+  </div>
 
-  <% unless @current_survey.nil? %>
-    <%current_survey.questions.each%>
-  <% end %>
+  <a id="new_question_link" class="btn btn-inverse btn-large" href="#">Add a Question</a>
 
-</div>
-
-<div id="add_question">
-  <a class="btn btn-inverse btn-large" href="#">Add question</a>
-</div>
+  <div id="_question">
+  </div>
 
 
-
-<button id="submit" class=" btn-large btn btn-success">Submit</button>
+  <button id="submit" class=" btn-large btn btn-success">Create Form</button>
 </form>

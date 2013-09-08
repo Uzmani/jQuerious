@@ -2,7 +2,6 @@ function Modal(){
 }
 
 Modal.prototype = {
-
   showModal: function(form, link){
     console.log('in showModal function');
 
@@ -15,41 +14,50 @@ Modal.prototype = {
       $(form).trigger('openModal');
       e.preventDefault();
     });
-  },
-
-  createSurvey: function(form, link){
-    this.showModal(form, link);
-    $('#add_survey_title').on('click', function(e){
-      e.preventDefault();
-      console.log('form create question was clicked');
-
-      $.ajax({
-        url: '/survey/new',
-        type: 'get'
-      }).done(function(response){
-        var input = $('input[name="survey[name]"]');
-        $('#questionPartial').prepend('<p>' + input.val() + '</p>');
-        $('#surveyPartial').hide();
-        $('#questionPartial').show();
-      }).fail(function(jqXHR, textStatus, errorThrown){
-        console.log(errorThrown);
-      })
-    })
   }
 }
 
-
 $(document).ready(function() {
+ $('.container').hide().fadeIn(800);
 
   var modal = new Modal();
   modal.showModal($('#signin'), $('#signin_link'));
   modal.showModal($('#signup'), $('#signup_link'));
 
- $('.container').hide().fadeIn(800);
- $(function() {
-});
+  var question_counter = 1
 
-  modal.createSurvey($("#survey_form"), $('#create_survey'));
-  //modal.createSurvey($("#question"), $('#create_survey'));
+  $('#new_question_link').on('click', function(e){
+    e.preventDefault();
+    $(this).hide(); //new question button hide
 
-})
+    $.ajax({
+      url: '/form/question',
+      type: 'get'
+    }).done(function(response){
+      $('#_question').append(response);
+
+      $('#add_question').on('click', function(e){
+        var question_name = "question" + question_counter + "[title]"
+        question_counter += 1
+        var input = $('#question_name').attr('name', question_name);
+        $("#_question").append("<div>Question: " + input.val() + "</div>");
+        $('#questionFormDiv').hide();
+      }) // add question on click
+    }); //done
+  }) //new question link
+
+  $('#submit').on('click', function(e){  //submits form
+    e.preventDefault();
+    $.ajax({
+      url: '/survey/create',
+      type: 'post',
+      data:  $('#master_survey').serialize()
+    }).done(function(response){
+      console.log('ajax form submit successful');
+    }).fail(function(a, b, message){
+      console.log(message);
+    })
+  })
+
+
+}) //document ready
