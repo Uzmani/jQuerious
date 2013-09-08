@@ -27,7 +27,7 @@ body {
   right: 70px;
 }
 
-#submit, #add_choice,  #save_choice, #add_question, #confirm_survey, #save_question {
+#add_form_btns, #submit, #save_choice, #save_question {
   display: none;
 }
 

@@ -48,7 +48,6 @@ Survey.prototype = {
       that.choiceCounter += 1
       var hiddenSelector = 'choice[' + that.choiceCounter + '][question]'
       that.createHiddenInput(hiddenSelector)
-      console.log('CHECK NEW CHOICE INPUT TAG FOR VALUE')
       that.choiceSelector = 'choice[' + that.choiceCounter + '][option]'
       that.createInput(that.choiceSelector);
 
@@ -67,9 +66,24 @@ Survey.prototype = {
       $('#prompt').hide()
       $('#save_choice').hide();
       //show
-      $('#add_question').show();
-      $('#add_choice').show();
-      $('#confirm_survey').show();
+      $('#add_form_btns').show();
+    })
+  },
+  addChoice: function(){
+    var that = this
+    $('#form_buttons').on('click', '#add_choice', function(e){
+      e.preventDefault();
+    //hide
+    $('#add_form_btns').hide();
+    //show
+    $('#prompt').text('Create Answer Choice:');
+    $('#prompt').show();
+      that.choiceCounter += 1
+      var hiddenSelector = 'choice[' + that.choiceCounter + '][question]'
+      that.createHiddenInput(hiddenSelector)
+      that.choiceSelector = 'choice[' + that.choiceCounter + '][option]'
+      that.createInput(that.choiceSelector);
+      $('#save_choice').show();
     })
   }
 }
@@ -78,6 +92,7 @@ Survey.prototype = {
 $(function() {
   var survey = new Survey();
   survey.showTitle($('#save'), $('#_formConfirmation h1'))
-  survey.saveQuestion()
-  survey.showChoice()
+  survey.saveQuestion();
+  survey.showChoice();
+  survey.addChoice();
 })
