@@ -27,8 +27,13 @@ body {
   right: 70px;
 }
 
-#submit, #add_choice, #add_question, #confirm_survey, #save {
+#submit, #add_choice,  #save_choice, #add_question, #confirm_survey, #save_question {
   display: none;
+}
+
+#indented {
+  display: block;
+  width: 10px;
 }
 
 #signin_container {

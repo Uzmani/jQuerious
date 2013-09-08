@@ -24,4 +24,4 @@ $(document).ready(function() {
   modal.showModal($('#signin'), $('#signin_link'));
   modal.showModal($('#signup'), $('#signup_link'));
 
-}) //document ready
+})
