@@ -24,10 +24,22 @@ $(document).ready(function() {
   modal.showModal($('#signin'), $('#signin_link'));
   modal.showModal($('#signup'), $('#signup_link'));
 
-  var question_counter = 1
 
-  $('#new_question_link').on('click', function(e){
+  //Create Survey Page
+
+  // Constant for dynamically naming input fields
+  var question_counter = 0
+
+  //Display none will not hide buttons in application.css, using jquery here instead
+  $('#submit').hide();
+  $('#new_question_link').hide();
+
+  // 1. Add Survey Name to Form
+  //     Render Question
+  $('#save_survey_name').on('click', function(e){
     e.preventDefault();
+    $('h1').text($('#question_name').val());
+    $(this).parent().hide();
     $(this).hide(); //new question button hide
 
     $.ajax({
@@ -35,14 +47,15 @@ $(document).ready(function() {
       type: 'get'
     }).done(function(response){
       $('#_partial').append(response);
+      $('#new_choice_link').hide();
 
+    // 3. Add Question to Form
       $('#add_question').on('click', function(e){
-        var question_name = "question" + question_counter + "[title]"
         question_counter += 1
+        var question_name = "Question" + question_counter + "[title]"
         var input = $('#question_name').attr('name', question_name);
-        $("#_partial").append("<div>Question: " + input.val() + "</div>");
-        $('#questionFormDiv').hide();
-        $
+        $("#_partial").append("<div>Question" + question_counter + ": " + input.val() + "</div>");
+        $(this).parent().hide();
       }) // add question on click
     }); //done
   }) //new question link

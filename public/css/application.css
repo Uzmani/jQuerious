@@ -80,12 +80,6 @@ body {
   float: right;
 }
 
-/* Survey Buttons - jQuery function dependant on display none*/
-a#new_question_link,
-a#new_choice_link,
-button#submit {
-  display: none;
-}
 
 /*#logout {
   font-size: 20px;
