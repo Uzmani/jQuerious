@@ -5,11 +5,13 @@ helpers do
 
 end
 
-for each question's choices 
-count the number of all answers that has that choice's id
+# for each question's choices 
+# count the number of all answers that has that choice's id
 
-choices = Choice.all
+# questions = @current_survey.questions
 
-choices.each do |choice|
-  
-end
+# choices = questions.choices
+
+# choices.each do |choice|
+#   Answer.where(choice_id: choice.id)
+# end
