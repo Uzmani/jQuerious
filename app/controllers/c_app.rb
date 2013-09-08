@@ -18,7 +18,12 @@ get '/survey/new' do
 end
 
 post '/survey/:id/submit' do 
-  
+  current_survey = params[:id]
+  params.keep_if {|k,_| /\A\d+\z/ === k}
+  params.each_pair do |k,v|
+    Answer.create(user_id: current_user.id, question_id: k, choice_id: v)
+  end
+  redirect "/survey/#{current_survey}/stats"
 end
 
 
