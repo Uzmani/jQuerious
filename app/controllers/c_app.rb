@@ -17,7 +17,7 @@ get '/survey/new' do
 
 end
 
-post '/survey/:id/submit' do 
+post '/survey/:id/submit' do
   current_survey = params[:id]
   params.keep_if {|k,_| /\A\d+\z/ === k}
   params.each_pair do |k,v|
@@ -47,6 +47,9 @@ get '/form/question' do
   erb :"/survey/_create_qa", layout: false
 end
 
+get '/form/choice' do
+  erb :"/survey/_create_choice", layout: false
+end
 
 
 #chae erase this line and on
