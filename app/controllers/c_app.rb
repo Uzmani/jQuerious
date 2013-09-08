@@ -17,7 +17,7 @@ get '/survey/new' do
 
 end
 
-post '/survey/:id/submit' do 
+post '/survey/:id/submit' do
   current_survey = params[:id]
   params.keep_if {|k,_| /\A\d+\z/ === k}
   params.each_pair do |k,v|
@@ -28,10 +28,7 @@ end
 
 
 post '/survey/create' do
-
-  @current_survey = Survey.create(user_id: current_user.id, name: params[:name])
-
-  # receives JSON. Iterate through questions to create survey
+  puts params
 end
 
 
@@ -46,8 +43,13 @@ post '/survey/:id/question/create' do
 end
 
 
+get '/form/question' do
+  erb :"/survey/_create_qa", layout: false
+end
 
-
+get '/form/choice' do
+  erb :"/survey/_create_choice", layout: false
+end
 
 
 #chae erase this line and on
