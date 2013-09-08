@@ -1,3 +1,9 @@
+#stats div{
+  width: 260px;
+  display: inline-block;
+  margin: 25px;
+}
+
 .container {
   margin: 20px auto;
   width: 80%;
@@ -16,8 +22,9 @@ th {
 body {
   background-image: url("http://i.imgur.com/ft3twlS.png");
   background-size: cover;
-  background-repeat: repeat-y;
-}
+  background-attachment: fixed;
+/*  background-repeat: repeat-y;
+*/}
 
 
 .btn-toolbar {
