@@ -1,15 +1,17 @@
 <div id="_formConfirmation">
   <h1>Survey name:</h1>
+  <p id="prompt"></p>
 </div>
 
 <div class="survey_form">
   <form id="master_survey" action="/survey/create" method="post">
+    <input id="survey" name="survey[name]" type="text">
     <button id="submit" class=" btn-large btn btn-success">Create Survey</button>
   </form>
 </div>
 
 <div class="buttons">
-  <a id="add_choice" class="btn btn-inverse btn-large" href="#">Add an Answer</a>
+  <a id="add_choice" class="btn btn-inverse btn-large" href="#">Add an Answer Choice</a>
   <a id="add_question" class="btn btn-inverse btn-large" href="#">Add a Question</a>
   <a id="confirm_survey" class="btn btn-inverse btn-large" href="#">Finish Survey</a>
   <a id="save" class="btn btn-inverse btn-large" href="#">Save</a>
