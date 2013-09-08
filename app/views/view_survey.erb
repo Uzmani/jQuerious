@@ -1,12 +1,19 @@
 <div id="view_survey">
   <h3><%= @current_survey.name %></h3>
+  <ol>
   <% @current_survey.questions.each do |question| %>
-    <ul> <span><%= question.title%></span>
+   <li><%= question.title%></li>
+   
       <% question.choices.each do |choice| %>
-        <li> <input type="radio" name="<%= question.title%>" value="<%=choice.option%>"><%= choice.option%></li>
+        <label class="radio">
+         <input type="radio" name="<%= question.title%>" value="choice[:<%= choice.option%>]"><%= choice.option%>
+       </label>
      <% end %>
-   </ul> 
+   
   <% end %>
-
+  </ol>
 </div>
 
+<form action="/survey/<%= @current_survey.id %>/submit" method="post">
+  <button class="btn btn-success">Submit</button>
+</form>
