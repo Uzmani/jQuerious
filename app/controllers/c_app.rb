@@ -37,8 +37,9 @@ end
 
 
 post '/survey/:id/question/create' do
-
+  redirect '/home'
 end
+
 
 
 
