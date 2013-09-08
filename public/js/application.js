@@ -18,7 +18,7 @@ Modal.prototype = {
 }
 
 $(document).ready(function() {
- $('.container').hide().fadeIn(800);
+ $('.container').hide().fadeIn(900);
 
   var modal = new Modal();
   modal.showModal($('#signin'), $('#signin_link'));
