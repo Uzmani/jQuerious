@@ -4,10 +4,13 @@
       <h1>Survey name:</h1>
     </div>
 
-    <%= erb :"/survey/_create_title", layout: false %>
-
     <div id="_partial">
     </div>
+
+    <%= erb :"/survey/_create_title", layout: false %>
+
+    <a id="new_question_link" class="btn btn-inverse btn-large" href="#">Add a Question</a>
+    <a id="new_choice_link" class="btn btn-inverse btn-large" href="#">Add an Answer</a>
 
 <!--     <div id="created_survey">
       <% unless @current_survey.nil? %>
