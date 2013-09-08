@@ -28,10 +28,7 @@ end
 
 
 post '/survey/create' do
-
-  @current_survey = Survey.create(user_id: current_user.id, name: params[:name])
-
-  # receives JSON. Iterate through questions to create survey
+  puts params
 end
 
 
@@ -46,7 +43,9 @@ post '/survey/:id/question/create' do
 end
 
 
-
+get '/form/question' do
+  erb :"/survey/_create_qa", layout: false
+end
 
 
 

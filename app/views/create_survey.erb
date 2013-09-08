@@ -1,24 +1,20 @@
 <div>
-  <form action="/survey/create" method="post">
-    <h1>Survey name:</h1>
-    <input type="text" name="name">
-    <!-- chae, create js to grab element by keyup from form then append it after Survey name-->
+  <form id="master_survey" action="/survey/create" method="post">
+    <div id="_formConfirmation">
+      <h1>Survey name:</h1>
+    </div>
+
+    <%= erb :"/survey/_create_title", layout: false %>
+
+    <div id="_partial">
+    </div>
+
+<!--     <div id="created_survey">
+      <% unless @current_survey.nil? %>
+        <%current_survey.questions.each%>
+      <% end %>
+    </div> -->
+
+    <button id="submit" class=" btn-large btn btn-success">Create Form</button>
   </form>
 </div>
-
-<div id="created_survey">
-
-  <% unless @current_survey.nil? %>
-    <%current_survey.questions.each%>
-  <% end %>
-
-</div>
-
-<div id="add_question">
-  <a class="btn btn-inverse btn-large" href="#">Add question</a>
-</div>
-
-
-
-<button id="submit" class=" btn-large btn btn-success">Submit</button>
-</form>
