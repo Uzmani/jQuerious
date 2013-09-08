@@ -1,18 +1,16 @@
 <div>
   <form id="master_survey" action="/survey/create" method="post">
     <h1>Survey name:</h1>
-    <input type="text" name="name">
+   <%= erb :"/survey/_create_title", layout: false %>
 
-  <div id="created_survey">
-    <% unless @current_survey.nil? %>
-      <%current_survey.questions.each%>
-    <% end %>
-  </div>
+    <div id="created_survey">
+      <% unless @current_survey.nil? %>
+        <%current_survey.questions.each%>
+      <% end %>
+    </div>
 
-  <a id="new_question_link" class="btn btn-inverse btn-large" href="#">Add a Question</a>
-
-  <div id="_question">
-  </div>
+    <div id="_partial">
+    </div>
 
 
   <button id="submit" class=" btn-large btn btn-success">Create Form</button>

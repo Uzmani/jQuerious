@@ -34,14 +34,15 @@ $(document).ready(function() {
       url: '/form/question',
       type: 'get'
     }).done(function(response){
-      $('#_question').append(response);
+      $('#_partial').append(response);
 
       $('#add_question').on('click', function(e){
         var question_name = "question" + question_counter + "[title]"
         question_counter += 1
         var input = $('#question_name').attr('name', question_name);
-        $("#_question").append("<div>Question: " + input.val() + "</div>");
+        $("#_partial").append("<div>Question: " + input.val() + "</div>");
         $('#questionFormDiv').hide();
+        $
       }) // add question on click
     }); //done
   }) //new question link
