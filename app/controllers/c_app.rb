@@ -17,6 +17,9 @@ get '/survey/new' do
 
 end
 
+post '/survey/:id/submit' do 
+  
+end
 
 
 post '/survey/create' do
