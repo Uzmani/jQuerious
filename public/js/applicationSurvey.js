@@ -14,7 +14,6 @@ Survey.prototype = {
     var that = this
 
     eventClick.on('click', function(e){
-        $('#add_choice').show();
       e.preventDefault();
       //save to form
       var userInput = $('input:first').val();
@@ -26,26 +25,25 @@ Survey.prototype = {
       $('#prompt').text('Create Question: ')
       that.questionSelector = 'question[' + that.questionCounter + ']'
       that.createInput(that.questionSelector);
+      $('#save_question').show();
     })
   },
-  showQuestion: function(displayTag){
+  saveQuestion: function(){
     var that = this
-
-    $('#form_buttons').on('click', '#add_choice', function(e){
+    $('#form_buttons').on('click', '#save_question', function(e){
       e.preventDefault();
-      //increase counter
       that.questionCounter += 1
       //save to form
       var userInput = $('input:first').val();
       $('#displayed').append('<p>Question ' + that.questionCounter + ' : ' + userInput + '</p>');
       //hide
       $('#master_survey input').hide();
+      $('#save_question').hide();
       //show
       $('#prompt').text('Create Answer Choice:');
       that.choiceSelector = 'choice[' + that.choiceCounter + ']'
       that.createInput(that.choiceSelector);
-      $('#add_question').show();
-      $('#confirm_survey').show();
+      $('#')
     })
   },
   showChoice: function(){
@@ -57,5 +55,5 @@ Survey.prototype = {
 $(function() {
   var survey = new Survey();
   survey.showTitle($('#save'), $('#_formConfirmation h1'))
-  survey.showQuestion($('#prompt'))
+  survey.saveQuestion()
 })
