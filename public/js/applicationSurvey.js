@@ -16,7 +16,6 @@ Survey.prototype = {
   },
   showTitle: function(eventClick, displayTag){
     var that = this
-
     eventClick.on('click', function(e){
       e.preventDefault();
       //save to form
@@ -110,6 +109,21 @@ Survey.prototype = {
       //show
       $('#submit').show();
     })
+  },
+  submitSurvey: function(){
+    $('#master_survey').on('click', function(e){
+      e.preventDefault();
+      var $data = $(this).serialize();
+      $.ajax({
+        url: this.action,
+        type: this.method,
+        data: $data
+      }).done(function(response){
+        console.log('Ajax Successful');
+      }).fail(function(jqXHR, textStatus){
+        console.log(textStatus);
+      });
+    })
   }
 }
 
@@ -122,4 +136,5 @@ $(function() {
   survey.addChoice();
   survey.addQuestion();
   survey.finishForm();
+  survey.submitSurvey();
 })
