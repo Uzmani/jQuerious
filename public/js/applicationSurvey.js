@@ -54,13 +54,13 @@ Survey.prototype = {
       $('#save_choice').show();
     })
   },
-  showChoice: function(){
+  saveChoice: function(){
     var that = this
     $('#form_buttons').on('click', '#save_choice', function(e){
       e.preventDefault();
       //save to form
       var userInput = $('input:first').val();
-      $('#displayed').append('<p>Choice ' + that.choiceCounter + ' : ' + userInput + '</p>');
+      $('#displayed').append('<p>- ' + userInput + '</p>');
       //hide
       $('#master_survey input').hide();
       $('#prompt').hide()
@@ -76,7 +76,7 @@ Survey.prototype = {
     //hide
     $('#add_form_btns').hide();
     //show
-    $('#prompt').text('Create Answer Choice:');
+    $('#prompt').text('Create Answer Choice: ');
     $('#prompt').show();
       that.choiceCounter += 1
       var hiddenSelector = 'choice[' + that.choiceCounter + '][question]'
@@ -84,6 +84,21 @@ Survey.prototype = {
       that.choiceSelector = 'choice[' + that.choiceCounter + '][option]'
       that.createInput(that.choiceSelector);
       $('#save_choice').show();
+    })
+  },
+  addQuestion: function(){
+    var that = this
+    $('#form_buttons').on('click', '#add_question', function(e){
+      e.preventDefault();
+      //hide
+      $('#add_form_btns').hide();
+      //show
+    $('#prompt').text('Create Question: ');
+    $('#prompt').show();
+      that.questionCounter += 1
+      that.questionSelector = 'question[' + that.questionCounter + '][title]'
+      that.createInput(that.questionSelector);
+      $('#save_question').show();
     })
   }
 }
@@ -93,6 +108,7 @@ $(function() {
   var survey = new Survey();
   survey.showTitle($('#save'), $('#_formConfirmation h1'))
   survey.saveQuestion();
-  survey.showChoice();
+  survey.saveChoice();
   survey.addChoice();
+  survey.addQuestion();
 })
