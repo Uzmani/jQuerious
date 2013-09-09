@@ -77,6 +77,11 @@
 
   <%= erb :_signin %>
   <%= erb :_signup %>
+
+  <% if @error %>
+    <p class="error"><%= @error %> </p>
+  <% end %>
+
 </body>
 </html>
 
