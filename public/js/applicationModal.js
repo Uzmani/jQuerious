@@ -23,5 +23,5 @@ $(document).ready(function() {
   var modal = new Modal();
   modal.showModal($('#signin'), $('#signin_link'));
   modal.showModal($('#signup'), $('#signup_link'));
-
+  modal.showModal($('#form_success'), $('#submit'))
 })

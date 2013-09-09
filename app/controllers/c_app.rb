@@ -14,7 +14,6 @@ end
 get '/survey/new' do
   #stubbed:
   erb :create_survey
-
 end
 
 post '/survey/:id/submit' do
@@ -29,6 +28,7 @@ end
 
 post '/survey/create' do
   puts params
+  "I'm in the Post"
 end
 
 
