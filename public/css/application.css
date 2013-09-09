@@ -38,6 +38,15 @@ body {
   right: 70px;
 }
 
+#add_form_btns, #submit, #save_choice, #save_question {
+  display: none;
+}
+
+#indented {
+  display: block;
+  width: 10px;
+}
+
 #signin_container {
   color: black;
   background-color: #333;
