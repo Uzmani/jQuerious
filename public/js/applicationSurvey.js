@@ -100,6 +100,16 @@ Survey.prototype = {
       that.createInput(that.questionSelector);
       $('#save_question').show();
     })
+  },
+  finishForm: function(){
+    var that = this
+    $('#form_buttons').on('click', '#confirm_survey', function(e){
+      e.preventDefault();
+      //hide
+      $('#add_form_btns').hide();
+      //show
+      $('#submit').show();
+    })
   }
 }
 
@@ -111,4 +121,5 @@ $(function() {
   survey.saveChoice();
   survey.addChoice();
   survey.addQuestion();
+  survey.finishForm();
 })
