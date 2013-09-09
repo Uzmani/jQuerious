@@ -111,7 +111,9 @@ Survey.prototype = {
     })
   },
   submitSurvey: function(){
-    $('#master_survey').on('click', function(e){
+    //$('#master_survey').on('click'...) will call ajax
+    $('#master_survey').on('submit', function(e){
+      console.log('submitted')
       e.preventDefault();
       var $data = $(this).serialize();
       $.ajax({
