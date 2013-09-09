@@ -29,6 +29,7 @@ end
 post '/survey/create' do
   #parse_form(params)
   puts "*" * 80
+  puts params
   parse_form(params)
   puts "*" * 80
   "I'm in the Post"
