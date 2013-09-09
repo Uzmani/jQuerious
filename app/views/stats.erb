@@ -12,13 +12,16 @@
   <script type="text/javascript">
     Morris.Donut({
       element: '<%=question.title%>',
-      data: <%= get_question_breakdown(question) %>
+      data: <%= get_question_breakdown(question) %>,
+      colors :["#33B5E5","#99CC00","#FFBB33","#FF4444"]
+
     });
   </script>
 
 <% end %>
 
 </div>
+
 
 
 <!-- 
