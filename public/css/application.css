@@ -2,6 +2,7 @@
   width: 260px;
   display: inline-block;
   margin: 25px;
+}
 
 /* display properties overriden if partialQuestions is not at top of css*/
 #partialQuestions {
@@ -22,14 +23,13 @@
 th {
   text-align: left;
 }
-x
+
 
 body {
   background-image: url("http://i.imgur.com/ft3twlS.png");
   background-size: cover;
   background-attachment: fixed;
-/*  background-repeat: repeat-y;
-*/}
+}
 
 
 .btn-toolbar {
