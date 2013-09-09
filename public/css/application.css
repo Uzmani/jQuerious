@@ -1,13 +1,14 @@
+
+/* display properties overriden if partialQuestions is not at top of css*/
+#partialQuestions {
+  display: none;
+}
+
 #stats div{
   width: 260px;
   display: inline-block;
   margin: 25px;
   vertical-align: top
-}
-
-/* display properties overriden if partialQuestions is not at top of css*/
-#partialQuestions {
-  display: none;
 }
 
 .container {
@@ -40,6 +41,15 @@ body {
   position: fixed;
   top: 20px;
   right: 70px;
+}
+
+#add_form_btns, #submit, #save_choice, #save_question {
+  display: none;
+}
+
+#indented {
+  display: block;
+  width: 10px;
 }
 
 #signin_container {

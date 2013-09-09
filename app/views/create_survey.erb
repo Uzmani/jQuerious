@@ -1,31 +1,23 @@
-<div>
+<div id="_formConfirmation">
+  <h1>Survey name:</h1>
+  <p id="displayed"></p>
+  <p id="prompt"></p>
+</div>
+
+<div class="survey_form">
   <form id="master_survey" action="/survey/create" method="post">
-    <div id="_formConfirmation">
-      <h1>Survey name:</h1>
-    </div>
-
-    <div id="_partial">
-      <ul id="partialQuestions">
-        <li>
-          <ul id="partialChoices">
-            <li>
-            </li>
-          </ul>
-        </li>
-      </ul>
-    </div>
-
-    <%= erb :"/survey/_create_title", layout: false %>
-
-    <a id="new_question_link" class="btn btn-inverse btn-large" href="#">Add a Question</a>
-    <a id="new_choice_link" class="btn btn-inverse btn-large" href="#">Add an Answer</a>
-
-<!--     <div id="created_survey">
-      <% unless @current_survey.nil? %>
-        <%current_survey.questions.each%>
-      <% end %>
-    </div> -->
-
-    <button id="submit" class=" btn-large btn btn-success">Create Form</button>
+    <input id="survey" name="survey[name]" type="text">
+    <button id="submit" class=" btn-large btn btn-success">Create Survey</button>
   </form>
+</div>
+
+<div id="form_buttons">
+  <a id="save_choice" class="btn btn-inverse btn-large" href="#">Save Answer Choice</a>
+  <a id="save_question" class="btn btn-inverse btn-large" href="#">Save Question</a>
+  <a id="save" class="btn btn-inverse btn-large" href="#">Save</a>
+  <div id="add_form_btns">
+    <a id="add_choice" class="btn btn-inverse btn-large" href="#">Add additional Answer Choice</a>
+    <a id="add_question" class="btn btn-inverse btn-large" href="#">Add addditional Question</a>
+    <a id="confirm_survey" class="btn btn-inverse btn-large" href="#">Finish Survey</a>
+  </div>
 </div>
