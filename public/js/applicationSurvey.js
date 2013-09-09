@@ -121,7 +121,7 @@ Survey.prototype = {
       }).done(function(response){
         console.log('Ajax Successful');
       }).fail(function(jqXHR, textStatus){
-        console.log(textStatus);
+        console.log(jqXHR + " " + textStatus);
       });
     })
   }
