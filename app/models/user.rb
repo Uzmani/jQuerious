@@ -15,13 +15,4 @@ class User < ActiveRecord::Base
   end
 
 
-  def self.login(input)
-    @user = User.find_by_email(input[:email])
-    if @user.password == input[:password]
-      @user
-    else
-      @login_error = "Incorrect Username/Password combination"
-    end
-  end
-
 end

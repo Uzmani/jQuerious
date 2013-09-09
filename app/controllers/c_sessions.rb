@@ -1,9 +1,15 @@
 post '/user/signin' do
-  log_in_user(params)
-    unless @login_error
-      redirect '/home'
+    @user = User.find_by_email(params[:email])
+    unless @user.nil?
+      if @user.password == params[:password]
+        session[:user_id] = @user.id
+        redirect '/'    
+      end
     end
-  end
+        @error = "Bad E-Mail/Password combination"
+        erb :index
+
+end  
 
 post '/user/new' do
   p params
