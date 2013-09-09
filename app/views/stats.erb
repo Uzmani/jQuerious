@@ -1,22 +1,27 @@
 
-<h1>Statistic for <%= @current_survey.name %></h1>
-<div>
-  <% @current_survey.questions.each do |question| %>
-    
-      <% question.choices.each do |choice| %>
-      <div class="progress progress-info">
-        <div class="bar" style="width: 40%">
-          <!-- choice1 -->
-        </div>
-      </div>
-    <% end %>
-  <% end %>
+<h1>Statistics for <%= @current_survey.name %></h1>
+
+<div id="stats">
+<% @current_survey.questions.each do |question| %>
+
+  <div>
+    <div id="<%=question.title%>" style="width: 250px; height: 250px; display: inline-block; "></div>
+    <span class="q_title">Question: <%= question.title %> </span>
+  </div>
+
+  <script type="text/javascript">
+    Morris.Donut({
+      element: '<%=question.title%>',
+      data: <%= get_question_breakdown(question) %>
+    });
+  </script>
+
+<% end %>
+
 </div>
 
 
-
-
-
+<!-- 
 <div class="progress progress-info">
 
   <div class="bar" style="width: 20%"></div>
@@ -31,5 +36,3 @@
   <div class="bar" style="width: 80%"></div>
 
 </div>
-
-
