@@ -1,6 +1,8 @@
 class Choice < ActiveRecord::Base
-  # Remember to create a migration!
   has_many :answers
-  belongs_to :questions
+  # define associations to users through answers
+  belongs_to :questions #should be singular
+
+  # add validations
   
 end

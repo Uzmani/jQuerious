@@ -1,3 +1,5 @@
+// why is the Modal code included here when it's also in a separate file?
+
 function Modal(){
 }
 

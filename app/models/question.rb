@@ -1,5 +1,6 @@
 class Question < ActiveRecord::Base
   has_many :choices
-  belongs_to :questions
-  # Remember to create a migration!
+  belongs_to :questions # a question belongs to questions?
+
+  # add validations
 end
