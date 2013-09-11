@@ -7,7 +7,13 @@ helpers do
   end
 
   def logged_in?
-    current_user.nil?
+    !current_user.nil?
+  end
+
+  def log_in_user(user)
+    p user
+    # user = User.find_by_email(params[:email])
+    session[:user_id] = user.id
   end
   # ^ redundant, remove
 

@@ -14,10 +14,20 @@ end
 
 post '/user/new' do
   p params
-  @new = User.new(params) # why is this an instance variable? also, be more specific, as "new" doesn't tell me anything about *what* this thing is.
-  log_in_user(params) if @new.save #where is the code for this method?
+  user = User.new(username: params[:username], email: params[:email], password_hash: params[:password])
+     # why is this an instance variable? also, be more specific, as "new" doesn't tell me anything about *what* this thing is.
+  
+  
+  if user.save  
+    log_in_user(user)
+    redirect '/home'
+  else
+    redirect '/'
+  end 
+    
+     #where is the code for this method?
   # what happens if @new doesn't save?
-  redirect '/home'
+  # redirect '/home'
 end
 
 

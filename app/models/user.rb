@@ -1,4 +1,9 @@
 class User < ActiveRecord::Base
+  validates :username, :email, :password_hash, presence: true
+  
+  validates :email, :format => {with: /\A[^@]+@([^@\.]+\.)+[^@\.]+\z/,
+    message: "Invalid email" }
+
 
   has_many :surveys #alias to :created_surveys
   # also look into the :dependent => :destroy option
