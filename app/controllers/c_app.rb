@@ -9,10 +9,8 @@ get '/survey/:id/stats' do
   erb :stats
 end
 
-
-
 get '/survey/new' do
-  #stubbed:
+  #stubbed: (what is this for? -lla)
   erb :create_survey
 end
 
@@ -25,27 +23,23 @@ post '/survey/:id/submit' do
   redirect "/survey/#{current_survey}/stats"
 end
 
-
 post '/survey/create' do
-  #parse_form(params)
   puts "*" * 80
   puts params
-  parse_form(params)
+  parse_form(params) #move this from the helper into here and define
   puts "*" * 80
   "I'm in the Post"
 end
-
 
 get '/survey/:id' do
   @current_survey = Survey.find(params[:id])
   erb :view_survey
 end
 
-
 post '/survey/:id/question/create' do
+  # this needs to be built out
   redirect '/home'
 end
-
 
 get '/form/question' do
   erb :"/survey/_create_qa", layout: false
@@ -55,8 +49,7 @@ get '/form/choice' do
   erb :"/survey/_create_choice", layout: false
 end
 
-
-#chae erase this line and on
+#chae erase this line and on (? -lla)
 
 get '/signin' do
   erb :_signin, layout: false
@@ -65,7 +58,4 @@ end
 get '/signup' do
   erb :_signup, layout: false
 end
-
-
-#create survey to pass to _create_qa
-#
+# ^ move 54-60 to the sessions controller

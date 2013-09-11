@@ -1,5 +1,6 @@
 class Survey < ActiveRecord::Base
   has_many :questions
-  belongs_to :user
-  # Remember to create a migration!
+  belongs_to :user #alias to :creator
+
+  #add validations
 end
