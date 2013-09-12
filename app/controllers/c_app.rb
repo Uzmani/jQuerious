@@ -25,7 +25,7 @@ end
 
 post '/survey/create' do
   puts "*" * 80
-  puts params
+  p params
   parse_form(params) #move this from the helper into here and define
   puts "*" * 80
   "I'm in the Post"

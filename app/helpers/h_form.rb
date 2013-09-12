@@ -3,26 +3,20 @@
 helpers do
 
   def parse_form(data)
+    
 
-    data.each do |key, value|
-      case key
-      when survey
-        survey.each do |s|        
-          survey[title] = val
-          Survey.create(title: s)
-        end
-      when question
-        question.each do |num|      
-          question[no][title] = val
-          Question.create(title: num[title])
-        end
-      when choice                          
-        choice[no][option] = val
-        choice.each do |num|         choice[no][question] = question id
-          Choice.create(option: num[option], question: num[question])
+    @survey = Survey.create(name: data["survey"]["name"], user_id: current_user.id)
+
+    data["question"].each do |number, title|
+      question = Question.create(title: title["title"], survey_id: @survey.id)
+
+      data["choice"].each do |key, value|
+        if number == value["question"]
+          question.choices << Choice.create(option: value["option"])
         end
       end
     end
+     
   end
 
 end
