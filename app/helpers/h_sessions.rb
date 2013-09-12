@@ -13,6 +13,7 @@ helpers do
   def log_in_user(user)
     p user
     # user = User.find_by_email(params[:email])
+    
     session[:user_id] = user.id
   end
   # ^ redundant, remove

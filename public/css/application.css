@@ -1,5 +1,56 @@
 
 /* display properties overriden if partialQuestions is not at top of css*/
+
+
+    #signin_container {
+    color: black;
+    background-color: #333;
+    width: 30%;
+    position: absolute;
+    top: 60%;
+    left: 35%;
+    border-radius: 10px;
+    text-align: center;
+    border: 5px solid #fff;
+    box-shadow: 10px 10px 50px #333
+    }
+
+  #signin_link {
+    border-bottom: 5px solid white;
+    padding: 10px;
+  }
+
+  #signup_link {
+    padding: 10px;
+  }
+
+  #signin_container a {
+    color: white;
+    text-decoration: none;
+    font-size: 30px
+  }
+
+  #signin_container a:hover {
+    color: black;
+    font-weight: bolder;
+  }
+  #signin {
+  background-color: black;
+  color: white;
+  border-radius: 10px;
+  border: 5px solid white;
+  padding: 10px 20px 20px 20px;
+  }
+
+  #signup {
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    border: 5px solid white;
+    padding: 10px 20px 20px 20px;
+  }
+
+
 #partialQuestions {
   display: none;
 }
@@ -36,10 +87,17 @@ body {
   background-attachment: fixed;
 }
 
+body {
+      background-image: url("http://i.imgur.com/4L8JqNq.png");
+      background-size: cover;
+      font-family: monospace, serif;
+    }
+
 
 .btn-toolbar {
+
   position: fixed;
-  top: 20px;
+  top: 30px;
   right: 70px;
 }
 
@@ -67,6 +125,7 @@ body {
 
 
 .welcome {
+
   padding: 40px;
 }
 
@@ -75,23 +134,24 @@ body {
   padding: 20px;
 }
 
-/*#your_surveys {
+#your_surveys {
+  background-color: white;
   border: 1px solid #111;
-
+  margin-top: 30px;
   border-radius: 25px;
   margin-bottom: 20px;
   padding: 20px;
   font-size: 20px;
 }
-*/
 
-/*#others_surveys {
+#others_surveys {
+  background-color: white;
   border: 1px solid;
   border-radius: 25px;
   margin-bottom: 20px;
   padding: 20px;
   font-size: 20px;
-}*/
+}
 
 #create_survey {
   position: relative;
