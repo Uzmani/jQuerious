@@ -1,9 +1,9 @@
 get '/' do
-  if logged_in? # => if current_user
+  if current_user
     @users_surveys = current_user.surveys
     redirect '/home'
   else
-    erb :index    #, :layout => false #why is layout false?
+    erb :index
   end
 end
 

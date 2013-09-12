@@ -88,10 +88,10 @@ body {
 }
 
 body {
-      background-image: url("http://i.imgur.com/4L8JqNq.png");
-      background-size: cover;
-      font-family: monospace, serif;
-    }
+  background-image: url("http://i.imgur.com/4L8JqNq.png");
+  background-size: cover;
+  font-family: monospace, serif;
+}
 
 
 .btn-toolbar {
